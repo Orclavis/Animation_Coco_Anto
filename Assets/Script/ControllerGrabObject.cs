@@ -104,7 +104,11 @@ public class ControllerGrabObject : MonoBehaviour
                 GrabObject();
             }
          }
-
+        
+         if(objectInHand != null)
+        {
+        }
+        
         if (Controller.GetHairTriggerUp())
         {
             if (objectInHand)
