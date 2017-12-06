@@ -125,9 +125,11 @@ namespace HTC.UnityPlugin.StereoRendering
                 var anchorRotChanged = EditorGUI.EndChangeCheck();
 
                 Handles.color = anchorColor;
-                Handles.CubeCap(0, newAnchorPos, newAnchorRot, cubeSize);
+#pragma warning disable CS0618 // Le type ou le membre est obsolète
+        Handles.CubeCap(0, newAnchorPos, newAnchorRot, cubeSize);
+#pragma warning restore CS0618 // Le type ou le membre est obsolète
 
-                if (anchorPosChanged || anchorRotChanged)
+        if (anchorPosChanged || anchorRotChanged)
                 {
                     Undo.RecordObject(target, "Stereo Anchor Pose Changed");
 
@@ -140,8 +142,10 @@ namespace HTC.UnityPlugin.StereoRendering
             else
             {
                 Handles.color = anchorColor;
-                Handles.CubeCap(0, script.anchorTransform.transform.position, script.anchorTransform.transform.rotation, cubeSize);
-            }
+#pragma warning disable CS0618 // Le type ou le membre est obsolète
+        Handles.CubeCap(0, script.anchorTransform.transform.position, script.anchorTransform.transform.rotation, cubeSize);
+#pragma warning restore CS0618 // Le type ou le membre est obsolète
+      }
 
             // draw handle for canvas origin object
             if(script.canvasOrigin == null)
@@ -158,9 +162,11 @@ namespace HTC.UnityPlugin.StereoRendering
                 var originRotChanged = EditorGUI.EndChangeCheck();
 
                 Handles.color = originColor;
-                Handles.CubeCap(0, newOriginPos, newOriginRot, cubeSize);
+#pragma warning disable CS0618 // Le type ou le membre est obsolète
+        Handles.CubeCap(0, newOriginPos, newOriginRot, cubeSize);
+#pragma warning restore CS0618 // Le type ou le membre est obsolète
 
-                if (originPosChanged || originRotChanged)
+        if (originPosChanged || originRotChanged)
                 {
                     Undo.RecordObject(target, "Canvas Origin Pose Changed");
 
@@ -173,8 +179,10 @@ namespace HTC.UnityPlugin.StereoRendering
             else
             {
                 Handles.color = originColor;
-                Handles.CubeCap(0, script.canvasOrigin.transform.position, script.canvasOrigin.transform.rotation, cubeSize);
-            }
+#pragma warning disable CS0618 // Le type ou le membre est obsolète
+        Handles.CubeCap(0, script.canvasOrigin.transform.position, script.canvasOrigin.transform.rotation, cubeSize);
+#pragma warning restore CS0618 // Le type ou le membre est obsolète
+      }
         }
     }
 }
