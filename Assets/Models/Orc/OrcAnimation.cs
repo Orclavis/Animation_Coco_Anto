@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class OrcAnimation : MonoBehaviour {
     Animator animator;
@@ -19,25 +20,13 @@ public class OrcAnimation : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetFloat("Speed", 2.0f);
-            isWalking = true;
-            
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            animator.SetFloat("Speed", 0.0f);
-            isWalking = false;
-        }
-        if (isWalking)
-        {
-            FBX.transform.Translate(new Vector3(0, 0, 0.01f));
-        }
-    }
+            Sequence EntreeOrc = DOTween.Sequence();
+            EntreeOrc.Append(porte.transform.DORotate(new Vector3(0, -90, 0), 3, RotateMode.LocalAxisAdd).SetLoops(2, LoopType.Yoyo));
+            EntreeOrc.Insert(1, (gameObject.transform.DOMoveZ(-6, 4)).
+                OnComplete(() => animator.SetBool("IsWalking", false))).
+                OnStart(() => animator.SetBool("IsWalking", true));
 
-    IEnumerator Entree()
-    {
-        
-        yield return new WaitForSeconds(2);
+        }
     }
 
 }
