@@ -20,17 +20,11 @@ namespace forge.Iron
             sword = GameObject.Find("sword");
         }
 
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                Upgrade();
-        }
 
         public void Upgrade()
         {
             if (anvil)
             {
-                Debug.Log(nbCoup);
                 if (nbCoup == 0)
                     rend.material.SetColor("_Color", orange);
                 if (nbCoup == 1)

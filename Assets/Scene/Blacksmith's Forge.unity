@@ -1089,15 +1089,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4a6e1b401bec6f541bdfa7421c000ec6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.813
+      value: -0.963
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a6e1b401bec6f541bdfa7421c000ec6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.084
+      value: 1.051
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a6e1b401bec6f541bdfa7421c000ec6, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.641
+      value: -9.601
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a6e1b401bec6f541bdfa7421c000ec6, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1164,8 +1164,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0785904, y: 0.060671426, z: 0.44461766}
-  m_Center: {x: -0.000025060028, y: -0.0013718148, z: -0.059445873}
+  m_Size: {x: 0.03564596, y: 0.035984218, z: 0.44461766}
+  m_Center: {x: -0.001136221, y: 0.0030415535, z: -0.059445873}
 --- !u!65 &136364050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ Rigidbody:
   m_GameObject: {fileID: 136364048}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 500
+  m_Drag: 0
   m_AngularDrag: 500
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -5689,13 +5689,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031808212}
-  m_LocalRotation: {x: 0.029253138, y: 0.17671533, z: 0.060657714, w: 0.9819555}
-  m_LocalPosition: {x: -0.457, y: 1.205, z: -8}
+  m_LocalRotation: {x: 0.040965214, y: -0.02644365, z: 0.05345051, w: 0.9973794}
+  m_LocalPosition: {x: 0.126, y: 0.979, z: -10.044}
   m_LocalScale: {x: 0.85026765, y: 0.062500104, z: 0.060000654}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 2.0640001, y: 20.538, z: 7.4440002}
+  m_LocalEulerAnglesHint: {x: 4.8500004, y: -2.782, z: 6.017}
 --- !u!54 &1031808217
 Rigidbody:
   m_ObjectHideFlags: 0
